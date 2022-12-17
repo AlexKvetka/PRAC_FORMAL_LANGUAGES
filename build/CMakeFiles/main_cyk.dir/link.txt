@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/main_cyk.dir/src/CYK.cpp.o CMakeFiles/main_cyk.dir/src/HomskiNormalForm.cpp.o CMakeFiles/main_cyk.dir/src/Globals.cpp.o CMakeFiles/main_cyk.dir/src/GetWords.cpp.o CMakeFiles/main_cyk.dir/src/GetGrammar.cpp.o CMakeFiles/main_cyk.dir/src/Printfuncs.cpp.o CMakeFiles/main_cyk.dir/src/own_CYK.cpp.o -o ../bin/main_cyk 

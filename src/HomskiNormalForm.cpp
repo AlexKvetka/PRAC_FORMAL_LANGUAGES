@@ -25,7 +25,6 @@ void UpdateRules() {
   bool flag;
 	for(int i = 0; i < non_terminals_hnf[i].size(); ++i) {
 		final_vec = {};
-    std::cout << non_terminals_hnf[i] << std::endl;
 		for(int j = 0; j < Rules_hnf[non_terminals_hnf[i]].size(); ++j) {
       flag = 1;
 			for(int k = 0; k < Rules_hnf[non_terminals_hnf[i]][j].size(); ++k) {
@@ -37,12 +36,6 @@ void UpdateRules() {
 			if(flag) {
 				final_vec.push_back(Rules_hnf[non_terminals_hnf[i]][j]);
 			}
-      for(int w = 0; w < final_vec.size(); ++w) {
-        for(int q = 0; q < final_vec[w].size(); ++q) {
-          std::cout << final_vec[w][q] << " ";
-        }
-        std::cout << std::endl;
-      }
 		}
 		Rules_hnf[non_terminals_hnf[i]] = final_vec;
   }
@@ -161,7 +154,6 @@ int IsReached(int index) {
   for(int i = 0; i < non_terminals.size(); ++i) {
     if(IsInVec(Rules[non_terminals[i]], non_terminals[index])) {
       if(IsReached(i) == 1) {
-        std::cout << is_reached[index] << " " << index << std::endl;
         is_reached[index] = 1;
         return 1;
       } 
@@ -234,13 +226,11 @@ void DeleteOnlyEpsilons(std::string non_term) {
 }
 
 void ChangeEpsilonBorn() {
-  std::cout << "EPS PROC" << std::endl;
   for(int i = 0; i < non_terminals_hnf.size(); ++i) {
     for(int j = 0; j < Rules[non_terminals_hnf[i]].size(); ++j) {
       for(int k = 0; k < Rules[non_terminals_hnf[i]][j].size(); ++k) {
         std::vector<std::string> vec = Rules[non_terminals_hnf[i]][j];
         std::string elem = vec[k];
-        std::cout << elem << std::endl;
         if(elem == "epsilon") {
           if(Rules[non_terminals_hnf[i]].size() == 1 && Rules[non_terminals_hnf[i]][0].size()){
             DeleteOnlyEpsilons(non_terminals_hnf[i]);
