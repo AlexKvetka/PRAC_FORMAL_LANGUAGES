@@ -2,9 +2,7 @@
 
 bool CYKParse(std::vector<std::string> w) {
   int n = (int)w.size();
-
   std::map<int, std::map<int, std::set<std::string>>> Table;
-
   std::string lhs;
 	std::vector<std::vector<std::string>> rule;
 	bool condition0;
@@ -18,7 +16,6 @@ bool CYKParse(std::vector<std::string> w) {
         if (rhs.size() == 1 && rhs[0] == w[j]) Table[j][j].insert(lhs);
       }
     }
-
     for (int i = j; i >= 0; i--) {
       for (int k = i; k <= j; k++) {
         for (auto x : Rules_hnf) {
@@ -41,7 +38,6 @@ bool CYKParse(std::vector<std::string> w) {
       }
     }
   }
-
   if (Table[0][n - 1].size() != 0) {
     return true;
   } else {

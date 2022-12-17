@@ -5,7 +5,7 @@ error_code=$?
 
 if [ $error_code -ne 0 ]
 then
-    echo "Installing pip"
+    echo "Install pip"
     wget https://bootstrap.pypa.io/get-pip.py -O /tmp/get-pip.py
     sudo ${python_exe} /tmp/get-pip.py
 fi

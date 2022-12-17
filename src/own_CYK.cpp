@@ -2,7 +2,7 @@
 
 extern void ProcessInput();
 extern void GetWords();
-extern void CYKParse(std::vector<std::string> w);
+extern bool CYKParse(std::vector<std::string> w);
 extern void HomskyNormalForm();
 extern std::vector<std::vector<std::string>> all_words;
 
@@ -25,7 +25,11 @@ int main() {
       std::cout << all_words[i][j] << " ";
     }
     std::cout << std::endl;
-    CYKParse(all_words[i]);
+    if(CYKParse(all_words[i])) {
+      std::cout << "True" << std::endl;
+    } else {
+      std::cout << "False" << std::endl;
+    }
     std::cout << std::endl;
 
   }
