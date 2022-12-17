@@ -115,7 +115,6 @@ int IsGenerating(std::string str, int index) {
   if(is_generating[GetNonTerminalIndex(str)] != -1) {
     return is_generating[GetNonTerminalIndex(str)];
   }
-  int all_terminals = -1;
   for(int i = 0; i < Rules[str].size(); ++i) {
     int exist_non_term = -1;
     for(int j = 0; j < Rules[str][i].size(); ++j) {
@@ -219,7 +218,6 @@ void DeleteOnlyEpsilons(std::string non_term) {
         if(Rules[non_terminals_hnf[i]][j][k] == non_term) {
           Rules[non_terminals_hnf[i]][j].erase(Rules[non_terminals_hnf[i]][j].begin() + k);
         }
-      
       }
     }
   }
