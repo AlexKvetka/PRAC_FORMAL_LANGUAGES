@@ -1,5 +1,0 @@
-/home/arapus/FormalkiPrac/forGitHubYangerErly/build/CMakeFiles/main.dir
-/home/arapus/FormalkiPrac/forGitHubYangerErly/build/CMakeFiles/test.dir
-/home/arapus/FormalkiPrac/forGitHubYangerErly/build/CMakeFiles/main_cyk.dir
-/home/arapus/FormalkiPrac/forGitHubYangerErly/build/CMakeFiles/edit_cache.dir
-/home/arapus/FormalkiPrac/forGitHubYangerErly/build/CMakeFiles/rebuild_cache.dir
